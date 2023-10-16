@@ -1,55 +1,41 @@
-import React from "react";
-
+import React, { useState, useEffect } from "react";
 import image from "../images/middle.png";
 
 const imageAltText = "purple and blue lofi illustrated background";
 
-const description =
-  "Crafting code, mods, and streams while speedrunning through the digital realm.";
-
-const skillsList = [
-  "AI-Powered Solutions",
-  "Game Modding & Development",
-  "Speedrunning Analytics",
-  "IRL Streaming on Twitch",
-  "Digital Advocacy for Open Internet",
-  "Content Creation for Developers & Students",
-];
-
-const detailOrQuote =
-  "Where code meets creativity, I'm on the frontline, turning digital dreams into playful realities. Join the pixel revolution!";
-
 const About = () => {
+  // State to hold the fetched readme content
+  const [readmeContent, setReadmeContent] = useState("");
+
+  // Fetch the raw content of the README.md file from GitHub
+  useEffect(() => {
+    fetch("https://raw.githubusercontent.com/hpwn/hpwn/main/README.md")
+      .then((response) => response.text()) // Getting the response body as plain text
+      .then((content) => {
+        // Setting the state to the fetched text content
+        setReadmeContent(content);
+      })
+      .catch((error) => {
+        console.error("Error fetching README.md: ", error);
+        setReadmeContent("Error loading content. Please check the console for more details.");
+      });
+  }, []); // The empty array means this effect runs once when the component mounts
+
   return (
     <section className="min-height shadow-effect" id="about">
       <img className="background" src={image} alt={imageAltText} />
       <div
         style={{
-          backgroundColor: "white",
-          width: "50%",
+          backgroundColor: "#D3D3D3",
+          width: "30%",
           padding: "4rem",
           margin: "3rem auto",
-          textAlign: "center",
+          textAlign: "left", // Align the text to the left
         }}
       >
-        <h2>About Myself</h2>
-        <p className="large">{description}</p>
-        <hr />
-        <ul
-          style={{
-            textAlign: "left",
-            columns: 2,
-            fontSize: "1.25rem",
-            margin: "2rem 3rem",
-            gap: "3rem",
-          }}
-        >
-          {skillsList.map((skill) => (
-            <li key={skill}>{skill}</li>
-          ))}
-        </ul>
-        <hr />
-        <p style={{ padding: "1rem 3rem 0" }}>{detailOrQuote}</p>
+        <h2>About Me</h2>
+        {/* Display the content as preformatted text */}
+        <pre style={{ whiteSpace: "pre-wrap", wordBreak: "break-word" }}>{readmeContent}</pre>
       </div>
     </section>
   );
