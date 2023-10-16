@@ -4,51 +4,30 @@ import PropTypes from "prop-types";
 
 import image from "../images/top.png";
 
-const imageAltText =
-  "Man in nice clothes staring off into the distance of a lofi landscape setting";
-
 const Home = ({ name, title }) => {
   return (
-    <section id="home" className="min-height shadow-effect">
-      <img className="background" src={image} alt="" />
-      <div
-        style={{
-          position: "absolute",
-          top: "5rem",
-          left: "2rem",
-          width: "17rem",
-          textShadow: "0 0 8px rgba(255, 255, 255, 0.5)", // Background shadow
-        }}
-      >
-        <h1
-          style={{
-            color: "black",
-            textShadow: "0 0 2px white, 0 0 3px white, 0 0 4px white", // Refined glow
-            letterSpacing: "1px", // Letter spacing
-          }}
-        >
-          {name}
-        </h1>
-        <h2
-          style={{
-            color: "black",
-            textShadow: "0 0 2px white, 0 0 3px white, 0 0 4px white",
-            letterSpacing: "0.5px",
-          }}
-        >
-          {title}
-        </h2>
+    <section id="home" className="home-container">
+      <img className="background" src={image} alt="background" />
+      <div className="centered-content">
+        <div className="name-title">
+          <h1>{name}</h1>
+          <h2>{title}</h2>
+        </div>
+        <div className="navigation-links">
+          <a href="#about">About</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#footer">Contact</a>
+          {/* You can add a "Subscribe" link here if you have a specific destination in mind */}
+          <a href="https://twitch.tv/hp_az">Subscribe</a>
+        </div>
+        {/* Removed the arrow icon from here */}
       </div>
-      <div style={{ position: "absolute", bottom: "3rem", left: "50%" }}>
-        <img src={arrowSvg} style={{ height: "3rem", width: "3rem" }} alt={imageAltText} />
+      {/* Placed the arrow outside the centered content but still within the home-container */}
+      <div className="arrow-icon">
+        <img src={arrowSvg} alt="down arrow" />
       </div>
     </section>
   );
-};
-
-Home.defaultProps = {
-  name: "",
-  title: "",
 };
 
 Home.propTypes = {

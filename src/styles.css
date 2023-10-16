@@ -129,3 +129,66 @@ img.socialIcon {
   -moz-box-shadow: 0 10px 10px -5px #555;     /* For Mozilla browsers */
   box-shadow: 0 10px 10px -5px #202530;          /* Standard syntax */
 }
+
+.home-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* makes main content and arrow stack */
+}
+
+.centered-content {
+  display: flex;
+  flex-direction: column; /* Organizes content into separate rows */
+  align-items: center;
+  text-align: center; /* Ensures your text is centered within its container */
+  z-index: 1; /* Makes sure your content stays above the background image */
+}
+
+.name-title {
+  margin-bottom: 20px; /* Or whatever space you prefer */
+}
+
+.name-title h1 {
+  color: #b76762; /* muted rose color for the name */
+  text-shadow: 2px 2px 2px #232d39; /* subtle shadow with the dark blue-gray color */
+  font-weight: bold; /* or any custom font-weight as per your preferred font */
+  margin-bottom: 20px; /* spacing between name and title, adjust as needed */
+}
+
+.name-title h2 {
+  color: #16181e; /* white or any other light shade for contrast */
+  text-shadow: 1px 1px 2px #232d39; /* less pronounced shadow for the title */
+  font-style: bold; /* if you want the title to be italicized for added distinction */
+  margin-top: 0;
+}
+
+.navigation-links a {
+  margin: 0 15px; /* Adjusts space around your links */
+  text-decoration: none;
+  color: #ffffff; /* default color, change to whatever you prefer */
+  transition: color 0.3s ease; /* this makes the color fade smoothly */
+}
+
+.navigation-links a:hover {
+  color: #4e567e; /* this is the color that will be applied on hover, change to your preferred color */
+}
+
+.navigation-links {
+  margin-bottom: 20px; /* Space between links and the arrow icon */
+}
+
+.arrow-icon {
+  position: absolute;
+  bottom: 20px; /* this positions the icon at the bottom; you can adjust as necessary */
+  left: 50%; /* centers the icon horizontally */
+  transform: translateX(-50%); /* ensures true centering by adjusting for the element's width */
+}
+
+.arrow-icon img {
+  height: 1.5rem; /* 50% of the original 3rem */
+  width: 1.5rem; /* 50% of the original 3rem */
+}
