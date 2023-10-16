@@ -123,3 +123,9 @@ img.socialIcon {
   height: 30px;
   width: 30px;
 }
+
+.shadow-effect {
+  -webkit-box-shadow: 0 10px 10px -5px #555;  /* For WebKit browsers */
+  -moz-box-shadow: 0 10px 10px -5px #555;     /* For Mozilla browsers */
+  box-shadow: 0 10px 10px -5px #202530;          /* Standard syntax */
+}

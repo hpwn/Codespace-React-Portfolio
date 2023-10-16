@@ -1,35 +1,12 @@
-/**
- * About component
- *
- * Space for you to describe more about yourself.
- */
-
 import React from "react";
 
-/**
- * About background image
- *
- * Below is a sample image. Upload the image of your choice into the "images"
- * directory and import here for use. Then, set imageAltText to string that
- * represents what you see in that image.
- *
- * Need an image? Check out https://unsplash.com to download a image you
- * freely use on your site.
- */
-import image from "../images/0_0.svg";
+import image from "../images/middle.png";
 
 const imageAltText = "purple and blue lofi illustrated background";
 
-/**
- * Sort description that expands on your title on the Home component.
- */
 const description =
   "Crafting code, mods, and streams while speedrunning through the digital realm.";
 
-/**
- * List of some of skills or technologies you work on, are learning,
- * passionate about, or enjoy,
- */
 const skillsList = [
   "AI-Powered Solutions",
   "Game Modding & Development",
@@ -39,17 +16,12 @@ const skillsList = [
   "Content Creation for Developers & Students",
 ];
 
-/**
- * Use this to give more information about what you are passionate about,
- * how you best work, or even a quote. This will help someone learn more
- * about you on a professional level.
- */
 const detailOrQuote =
   "Where code meets creativity, I'm on the frontline, turning digital dreams into playful realities. Join the pixel revolution!";
 
 const About = () => {
   return (
-    <section className="padding" id="about">
+    <section className="min-height shadow-effect" id="about">
       <img className="background" src={image} alt={imageAltText} />
       <div
         style={{

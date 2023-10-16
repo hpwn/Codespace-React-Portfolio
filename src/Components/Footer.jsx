@@ -1,10 +1,4 @@
 /**
- * Footer component
- *
- * Displays avenues to contact you.
- * Contact information is passed in from the App component that
- * renders the Footer.
- *
  * If a social value has an empty string it will not be displayed.
  */
 import React from "react";
@@ -19,26 +13,8 @@ import mediumIcon from "../images/socials/medium.svg";
 import twitterIcon from "../images/socials/twitter.svg";
 import youTubeIcon from "../images/socials/youtube.svg";
 
-/**
- * 💡 Learning resources
- *
- *  HTML hyperlinks: https://www.w3schools.com/html/html_links.asp
- *  Opening links in new tabs: https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/
- */
-
 const Footer = (props) => {
-  const {
-    devDotTo,
-    email,
-    gitHub,
-    instagram,
-    linkedIn,
-    medium,
-    name,
-    primaryColor,
-    twitter,
-    youTube,
-  } = props;
+  const { devDotTo, email, gitHub, instagram, linkedIn, medium, name, twitter, youTube } = props;
 
   return (
     <div
@@ -49,8 +25,8 @@ const Footer = (props) => {
         alignItems: "center",
         gap: "2.5rem",
         padding: "5rem 0 3rem",
-        backgroundColor: primaryColor,
-        width: "100vw"
+        backgroundColor: "#976764",
+        width: "100vw",
       }}
     >
       <div
@@ -131,7 +107,6 @@ Footer.propTypes = {
   primaryColor: PropTypes.string,
   twitter: PropTypes.string,
   youTube: PropTypes.string,
-
 };
 
 export default Footer;

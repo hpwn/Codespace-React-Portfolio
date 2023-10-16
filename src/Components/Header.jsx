@@ -1,9 +1,3 @@
-/**
- * Header component
- *
- * Top navigation bar for your site. Set to remain visible as the
- * user scrolls so that they can constantly reach any part of your page.
- */
 import React from "react";
 
 const Header = () => {
@@ -14,7 +8,7 @@ const Header = () => {
         display: "flex",
         justifyContent: "center",
         gap: "2rem",
-        background: "rgba(255,255,255,0.75)",
+        background: "#aa8f8a",
         padding: "1rem",
         top: 0,
         width: "100%",
