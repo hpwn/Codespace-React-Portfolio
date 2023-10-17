@@ -131,6 +131,7 @@ img.socialIcon {
 }
 
 .home-container {
+  background-image: url('../images/top.png');
   position: relative;
   width: 100vw;
   height: 100vh;

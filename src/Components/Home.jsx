@@ -7,7 +7,6 @@ import image from "../images/top.png";
 const Home = ({ name, title }) => {
   return (
     <section id="home" className="home-container">
-      <img className="background" src={image} alt="background" />
       <div className="centered-content">
         <div className="name-title">
           <h1>{name}</h1>
