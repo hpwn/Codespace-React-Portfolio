@@ -15,7 +15,6 @@ const Home = ({ name, title }) => {
         </div>
         <div className="navigation-links">
           <a href="#about">About</a>
-          <a href="#portfolio">Portfolio</a>
           <a href="#footer">Contact</a>
           {/* You can add a "Subscribe" link here if you have a specific destination in mind */}
           <a href="https://twitch.tv/hp_az">Subscribe</a>
