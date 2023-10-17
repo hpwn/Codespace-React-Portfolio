@@ -14,6 +14,7 @@ const Home = ({ name, title }) => {
           <h2>{title}</h2>
         </div>
         <div className="navigation-links">
+          <a href="https://github.com/hpwn/hpwn/blob/main/Resume.pdf">Resume</a>
           <a href="#about">About</a>
           <a href="#footer">Contact</a>
           {/* You can add a "Subscribe" link here if you have a specific destination in mind */}
