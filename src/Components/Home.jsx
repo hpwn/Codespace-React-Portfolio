@@ -15,7 +15,7 @@ const Home = ({ name, title }) => {
           <a href="#about">About</a>
           <a href="#footer">Contact</a>
           {/* You can add a "Subscribe" link here if you have a specific destination in mind */}
-          <a href="https://twitch.tv/hp_az">Subscribe</a>
+          <a href="https://hwp.lol">Subscribe</a>
         </div>
         {/* Removed the arrow icon from here */}
       </div>
