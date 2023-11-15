@@ -32,7 +32,7 @@ const siteProps = {
   linkedIn: "hwp",
   medium: "",
   twitter: "hwplivnlow",
-  youTube: "haydenwade",
+  youTube: "hp_az",
 };
 
 const primaryColor = "#4E567E";
