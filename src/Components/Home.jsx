@@ -11,11 +11,11 @@ const Home = ({ name, title }) => {
           <h2>{title}</h2>
         </div>
         <div className="navigation-links">
-          <a href="https://github.com/hpwn/hpwn/blob/main/Resume.pdf">Resume</a>
+          <a href="https://twitch.tv/hp_az">Stream</a>
           <a href="#about">About</a>
           <a href="#footer">Contact</a>
           {/* You can add a "Subscribe" link here if you have a specific destination in mind */}
-          <a href="https://hwp.lol">Subscribe</a>
+          <a href="https://github.com/hpwn/hpwn/blob/main/Resume.pdf">Resume</a>
         </div>
         {/* Removed the arrow icon from here */}
       </div>
